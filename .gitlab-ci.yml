@@ -1,0 +1,9 @@
+stages:
+  - lint
+
+lint:
+  stage: lint
+  script:
+    - terraform fmt -check -diff
+  only:
+    - merge_requests
